@@ -1,0 +1,12 @@
+
+plugins {
+    id "org.jetbrains.gradle.plugin.idea-ext" version "1.1.5" // for some reason this is required in the consumer plugin as well
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}

@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        mavenLocal() // plugin published to maven local
+    }
+    dependencies {
+        classpath 'org.example:python-native-import-plugin:0.0.1' // plugin’s artifact
+    }
+}
+plugins {
+    id "org.jetbrains.gradle.plugin.idea-ext" // for some reason this is required in the consumer plugin as well
+}
+apply plugin: 'python.native.plugin'
+
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
